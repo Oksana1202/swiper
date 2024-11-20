@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url(./font/TTLakes/TTLakes-Regular.ttf);
+}
+
+@font-face {
+  font-family: "TT Lakes bold";
+  src: url(./font/TTLakes/TTLakes-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (width <= 768px) {
+  .services {
+    width: 100%;
+    height: 196px;
+    background-color: #f8f8f8;
+    align-items: flex-start;
+  }
+
+  .brand-slider__title {
+    width: 100vw;
+    height: 72px;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7e7e82;
+    font-weight: 300;
+    border-top: 1px solid #d9fff5;
+    display: flex;
+    align-items: center;
+    margin: 0px 0 16px 20px;
+    background: linear-gradient(to left, #fff, #f8f8f8);
+  }
+
+  .swiper-container {
+    width: 100vw;
+    overflow: hidden;
+    display: block;
+    color: #7e7e82;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0) 100%
+    );
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 16px;
+      margin-left: 16px;
+    }
+  }
+
+  .swiper-slide {
+    width: 240px;
+    flex: 0 0 auto;
+  }
+
+  .gradient {
+    height: 72px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      #f8f8f8
+    );
+    z-index: 100;
+  }
+
+  .brand-slider__item {
+    width: 208px;
+    height: 72px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0 16px;
+  }
+
+  .show-more {
+    display: none;
+    margin-top: 8px;
+  }
+
+  #swiper-pagination {
+    width: 100vw;
+    bottom: 12px;
+    gap: 12px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    position: static;
+    margin-top: 16px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+
+    background: #dddddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: #b5b6bc;
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .services {
+    width: 100%;
+    background-color: #f8f8f8;
+  }
+
+  .brand-slider__title {
+    font-family: "TT Lakes";
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7e7e82;
+    font-weight: 400;
+    border-top: 1px solid #d9fff5;
+    height: 55px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    background: linear-gradient(to left, #fff, #f8f8f8);
+  }
+
+  .swiper-container {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 16px;
+      padding: 16px;
+      .hidden,
+      .hidden-tablet {
+        display: none;
+      }
+    }
+  }
+  .gradient {
+    display: none;
+  }
+  .swiper-slide {
+    width: 224px;
+    padding: 0 16px;
+  }
+
+  .brand-slider__item {
+    width: 100%;
+    height: 72px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 6px;
+  }
+
+  .show-more {
+    display: flex;
+    border: 0;
+    background: transparent;
+    color: #1b1c21;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 32px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  #swiper-pagination {
+    display: none;
+  }
+}
+
+@media (width >= 1120px) {
+  .swiper-container {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 8px;
+      padding: 32px;
+      margin-left: -24px;
+      .hidden-tablet {
+        display: block;
+      }
+    }
+  }
+
+  .swiper-slide {
+    padding: 0 16px;
+    width: 240px;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+  #swiper-pagination {
+    display: none;
+  }
+  .gradient {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
